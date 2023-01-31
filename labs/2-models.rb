@@ -17,16 +17,28 @@ Salesperson.destroy_all
 #   full name of each salesperson.
 
 # 1a. check out the schema file
+
 # 1b. check out the model file
 
 # 2. insert 1-2 rows in salespeople table.
 
+
+salesperson= salesperson.new
+#puts company.inspect
+company["name"] = "Apple"
+company ["city"] = "Cupertino"
+company ["state"] = "CA"
+company ["url"] = "https://apple.com"
+#puts company.inspect
+company.save
 # 3. write code to display how many salespeople rows are in the database
 
 # ---------------------------------
 # Salespeople: 2
 
 # 4. modify/update column data for a row in the salespeople table.
+
+ben = Salesperson.find_by({"first_name" => "Ben", "last_name" => "Block"})
 
 # CHALLENGE:
 # 5. write code to display each salesperson's full name

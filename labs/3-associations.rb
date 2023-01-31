@@ -17,6 +17,12 @@ Activity.destroy_all
 # 1. insert 3 rows in the activities table with relationships to
 # a single salesperson and 2 different contacts
 
+new_activity = activity.new
+new_activity["salesperson_id"] = salespeople["id"]
+new_activity["company_id"] = companies["id"]
+new_activity["note"] = "quick check-in over facetime"
+new_activity.save
+
 # 2. Display all the activities between the salesperson used above
 # and one of the contacts (sample output below):
 
