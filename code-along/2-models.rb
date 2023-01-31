@@ -15,8 +15,36 @@ Company.destroy_all
 # 1b. check out the model file
 
 # 2. insert new rows in companies table
+puts "There are #{Company.all.count} companies"
+
+company = Company.new
+#puts company.inspect
+company["name"] = "Apple"
+company ["city"] = "Cupertino"
+company ["state"] = "CA"
+company ["url"] = "https://apple.com"
+#puts company.inspect
+company.save
+#INSERT INTO companies() VALUES()
+
+company = Company.new
+company["name"] = "Amazon"
+company ["city"] = "Seattle"
+company ["state"] = "WA"
+company.save
+
+company = Company.new
+company["name"] = "Twitter"
+company ["city"] = "San Francisco"
+company ["state"] = "CA"
+company.save
+
+puts "There are #{Company.all.count} companies"
 
 # 3. query companies table to find all row with California company
+all_companies = Company.all
+#puts all_companies.inspect
+puts all_companies[0].inspect
 
 # 4. query companies table to find single row for Apple
 
